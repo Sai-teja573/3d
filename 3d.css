@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8; /* Slightly lighter background */
+}
+
+.quiz-container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Increase border radius for a smoother look */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* A slightly stronger box shadow */
+    transition: all 0.3s;
+}
+
+.quiz-container:hover {
+    transform: scale(1.05); /* Slightly larger scaling on hover */
+}
+
+.question-container {
+    font-size: 28px; /* Larger font size for questions */
+    margin-bottom: 30px; /* Increased margin for questions */
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.options-container button {
+    display: block;
+    width: 100%;
+    padding: 15px; /* Larger padding for option buttons */
+    margin-bottom: 15px; /* Increased margin between option buttons */
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff; /* Added border */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options-container button:hover {
+    background-color: #0056b3; /* Slightly darker color on hover */
+}
+
+.timer-container {
+    font-size: 20px; /* Smaller font size for timer */
+    text-align: center;
+}
+
+.score-container {
+    font-size: 20px;
+    text-align: center;
+    margin: 30px; /* Reduced margin for score container */
+}
+
+.score-container span {
+    font-weight: bold;
+    color: #009900; /* Changed score color to green */
+}
+
+
+
+/* ... Your existing styles ... */ 
+
+/* Add animation for showing correct answer */
+.correct-answer-animation {
+    animation: correct-answer 1s ease-in-out;
+}
+
+@keyframes correct-answer {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Add animation for showing wrong answer */
+.wrong-answer-animation {
+    animation: wrong-answer 1s ease-in-out;
+}
+
+@keyframes wrong-answer {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
